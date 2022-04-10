@@ -16,7 +16,7 @@ for domain in $DOMAINS; do
     DOMAIN_ARR+=(--domain "$domain")
 done
 
-acme.sh --set-default-ca --server letsencrypt
+/root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 
 /root/.acme.sh/acme.sh --register-account -m ${ACCOUNT}
 
